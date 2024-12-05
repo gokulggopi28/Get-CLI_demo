@@ -26,9 +26,11 @@ class PostUserView extends GetView<PostUserController> {
           itemCount: controller.posts.length,
           itemBuilder: (context, index) {
             final post = controller.posts[index];
+            final title = post['title'];
+            final body = post['body'];
             return ListTile(
-              title: Text(post.title),
-              subtitle: Text(post.body),
+              title: Text(title),
+              subtitle: Text(body),
             );
           },
         );

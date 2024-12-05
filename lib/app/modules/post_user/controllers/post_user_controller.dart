@@ -1,11 +1,10 @@
 
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
-import 'package:getcli_demo/app/modules/post_user/models/post_user_model.dart';
 
 class PostUserController extends GetxController {
 
-  var posts = <PostUserModel>[].obs;
+  var posts = <Map<String, dynamic>>[].obs;
   var isLoading = true.obs;
 
   final Dio dio = Dio();
@@ -23,7 +22,7 @@ class PostUserController extends GetxController {
 
       if(response.statusCode == 200){
         final data = response.data as List;
-        posts.value = data.map((json)=> PostUserModel.fromJson(json)).toList();
+        posts.value = List<Map<String, dynamic>>.from(data);
 
       }
       else{
