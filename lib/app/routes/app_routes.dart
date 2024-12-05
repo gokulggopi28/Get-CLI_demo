@@ -10,6 +10,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const USER = _Paths.USER;
   static const POST_USER = _Paths.POST_USER;
+  static const COUNTRY = _Paths.COUNTRY;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const USER = '/user';
   static const POST_USER = '/post-user';
+  static const COUNTRY = '/country';
 }

@@ -47,7 +47,13 @@ class CounterView extends StatelessWidget {
           ),
           ElevatedButton(
              style: customButtonStyle,
-            onPressed: ()=> Get.toNamed('/post-user'), child: Text('Go to post user list'))
+            onPressed: ()=> Get.toNamed('/post-user'), child: Text('Go to post user list')),
+            SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+             style: customButtonStyle,
+            onPressed: ()=> Get.toNamed('/country'), child: Text('Go to Country page'))
         ],
       ),
       floatingActionButton: FloatingActionButton(
