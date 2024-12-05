@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -16,6 +17,8 @@ class PostUserView extends GetView<PostUserController> {
        body: Obx(() {
         if (controller.isLoading.value) {
           return const Center(child: CircularProgressIndicator(
+            color: Colors.deepPurple,
+            strokeCap: StrokeCap.square,
             backgroundColor: Colors.purple,
           ));
         }
