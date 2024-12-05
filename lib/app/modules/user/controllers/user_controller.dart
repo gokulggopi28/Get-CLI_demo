@@ -5,7 +5,7 @@ import 'dart:convert';
 
 class UserController extends GetxController {
 
-  var users = <User>[].obs;
+  var users = <Map<String, dynamic>>[].obs;
   var isLoading = true.obs;
 
   @override
@@ -20,7 +20,7 @@ class UserController extends GetxController {
       final response = await http.get(Uri.parse('https://randomuser.me/api/?results=10'));
       if(response.statusCode == 200){
         final data = jsonDecode(response.body);
-        users.value = (data['results'] as List).map((userJson) => User.fromJson(userJson)).toList();   
+        users.value = List<Map<String, dynamic>>.from(data['results']);
 
       }
       else{
