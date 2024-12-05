@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import '../models/user.dart';
 import 'dart:convert';
 
 class UserController extends GetxController {
