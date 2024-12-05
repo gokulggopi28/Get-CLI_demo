@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:getcli_demo/components/custom_button.dart';
 import '../../../routes/app_pages.dart';
