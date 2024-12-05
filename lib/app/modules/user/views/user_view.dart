@@ -21,16 +21,12 @@ class UserView extends GetView<UserController> {
          itemBuilder: (context, index){
 
           final user = controller.users[index];
-          final name = '${user['name']['first']} ${user['name']['last']}';
-          final email = user['email'];
-          final phone = user['phone'];
-          final picture = user['picture']['large'];
           return ListTile(
             leading: CircleAvatar(
-              backgroundImage: NetworkImage(picture),
+              backgroundImage: NetworkImage(user['picture']['large']),
             ),
-            title: Text(name),
-             subtitle: Text('$email\n$phone'),
+            title: Text('${user['name']['first']} ${user['name']['last']}'),
+             subtitle: Text('${user['email']}\n${user['phone']}'),
 
           );
 
